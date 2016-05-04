@@ -1,0 +1,5 @@
+development:
+  adapter: sqlite3
+  name: 'coding_challenges'
+  timeout: 500
+  database: ":memory:"
