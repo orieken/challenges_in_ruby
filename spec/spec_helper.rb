@@ -1,9 +1,17 @@
-
+ENV['RACK_ENV'] ||= 'development'
 require 'rspec'
+
 require 'active_record'
 require 'rack/test'
 require 'json'
 require 'factory_girl'
+require 'pry'
+require 'yaml'
+require 'faker'
+
+
+db_config = YAML::load(File.open('./config/database.yml'))
+ActiveRecord::Base.establish_connection(db_config['development'])
 
 
 require './coding_challenges.rb'
@@ -16,6 +24,7 @@ module RSpecMixin
   end
 end
 
+
 RSpec.configure do |config|
   config.include RSpecMixin
   config.include FactoryGirl::Syntax::Methods
@@ -25,5 +34,9 @@ RSpec.configure do |config|
   end
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
+  end
+  config.before(:suite) do
+    load './db/schema.rb'
+    FactoryGirl.find_definitions
   end
 end
