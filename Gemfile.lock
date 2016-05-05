@@ -47,14 +47,19 @@ GEM
     lumberjack (1.0.10)
     method_source (0.8.2)
     minitest (5.8.4)
+    mysql2 (0.4.4)
     nenv (0.3.0)
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    protected_attributes (1.1.3)
+      activemodel (>= 4.0.1, < 5.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-nav (0.2.4)
+      pry (>= 0.9.10, < 0.11.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -102,6 +107,10 @@ DEPENDENCIES
   factory_girl
   faker
   guard-rspec
+  mysql2
+  protected_attributes
+  pry
+  pry-nav
   rack-test
   rspec
   sinatra
