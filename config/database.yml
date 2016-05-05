@@ -1,5 +1,7 @@
 development:
   adapter: sqlite3
-  name: 'coding_challenges'
-  timeout: 500
+  encoding: utf8
+  pool: 5
+  timeout: 5000
   database: ":memory:"
+  verbosity: quiet
