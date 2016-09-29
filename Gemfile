@@ -11,6 +11,7 @@ gem 'factory_girl'
 gem 'rack-test'
 gem 'pry'
 gem 'pry-nav'
+gem 'cucumber'
 
 gem 'sinatra'
 gem 'sinatra-activerecord'
