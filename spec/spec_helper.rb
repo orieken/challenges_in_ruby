@@ -15,6 +15,7 @@ ActiveRecord::Base.establish_connection(db_config['development'])
 
 
 require './coding_challenges.rb'
+require 'widget'
 
 module RSpecMixin
   include Rack::Test::Methods
