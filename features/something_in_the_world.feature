@@ -16,4 +16,4 @@ Feature: Something is in the World
   @huh
   Scenario: some random dog walks by
     Given I create a Dog
-    Then there should be one dog in the world
+    Then there should be two dogs in the world

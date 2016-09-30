@@ -1,3 +1,5 @@
+require 'widget'
+
 class Dog
   attr_accessor :name
 

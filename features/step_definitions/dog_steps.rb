@@ -13,3 +13,7 @@ end
 Given(/^I create my other dog$/) do
   @my_dog = Dog.new({name: 'Spot'})
 end
+
+Then(/^there should be two dogs in the world$/) do
+  expect(instance_variables.size).to eql 4
+end
